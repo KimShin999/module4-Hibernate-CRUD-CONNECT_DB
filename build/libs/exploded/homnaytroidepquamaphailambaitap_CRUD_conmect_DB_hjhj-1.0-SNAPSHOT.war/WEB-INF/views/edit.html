@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Imfo My Song</title>
+</head>
+<body>
+<h1>Edit Song</h1>
+<form th:action="@{/songs/edit}" method="post" th:object="${song}">
+    <input hidden type="text" th:field="*{id}">
+    <label>
+        Name
+        <input type="text" th:field="*{name}">
+    </label>
+    <label>
+        Source ( nguồn youtobe )
+        <input type="text" th:field="*{source}">
+    </label>
+    <input type="submit" value="Save">
+</form>
+</body>
+</html>
